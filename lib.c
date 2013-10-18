@@ -1,7 +1,9 @@
 #include <dlfcn.h>
+#include <fcntl.h>
 #include <stdio.h>
 #include <stdarg.h>
-#include <fcntl.h>
+#include <unistd.h>
+#include <sys/types.h>
 
 typedef int (*openfn)(const char *, int, mode_t mode);
 typedef int (*preadfn)(int fd, void *buf, size_t bytes, off64_t off);
